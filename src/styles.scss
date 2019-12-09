@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-image: linear-gradient(to top, rgb(122, 132, 240), rgb(116, 126, 225), rgb(111, 121, 209), rgb(105, 115, 194), rgb(99, 110, 178), rgb(93, 104, 163), rgb(88, 99, 147), rgb(82, 93, 132), rgb(76, 88, 116), rgb(70, 82, 101), rgb(65, 77, 85), rgb(59, 71, 70));
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  background: #333333;
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: .8rem;
+  border: outset;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  margin: 1.2rem 0;
+}
+
+hr {
+  margin: .5rem 0;
+}

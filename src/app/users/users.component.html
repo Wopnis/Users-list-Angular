@@ -2,22 +2,7 @@
 
 <p>Users data's : </p>
 
-<div class="user" *ngIf="selectedUser">
-  <h2>{{selectedUser.lastName | uppercase }} from {{selectedUser.city}} data :</h2>
-  <hr>
-  <hr>
-  <div><span class="privateData">Name: </span>{{selectedUser.firstName}}</div>
-  <hr>
-  <div><span class="privateData">Surname: </span>{{selectedUser.lastName}}</div>
-  <hr>
-  <div><span class="privateData">Age: </span>{{selectedUser.age}}</div>
-  <hr>
-  <div>
-    <label>CITY:
-      <input [(ngModel)]="selectedUser.city" placeholder="city"/>
-    </label>
-  </div>
-</div>
+
 
 <div class="allUsers">
   <h2>Users list</h2>
@@ -28,6 +13,23 @@
     </li>
   </ul>
 </div>
+
+  <div class="user" *ngIf="selectedUser">
+    <h2>{{selectedUser.lastName | uppercase }} from {{selectedUser.city}} data :</h2>
+    <hr>
+    <hr>
+    <div><span class="privateData">Name: </span>{{selectedUser.firstName}}</div>
+    <hr>
+    <div><span class="privateData">Surname: </span>{{selectedUser.lastName}}</div>
+    <hr>
+    <div><span class="privateData">Age: </span>{{selectedUser.age}}</div>
+    <hr>
+    <div>
+      <label>CITY:
+        <input [(ngModel)]="selectedUser.city" placeholder="city"/>
+      </label>
+    </div>
+  </div>
 
 </div>
 
