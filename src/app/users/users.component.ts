@@ -11,7 +11,7 @@ import {User} from '../user';
 
 
 export class UsersComponent implements OnInit {
-  user = User;
+  user = User; // why did you assign interface to variable?
   users = USERS;
   selectedUser: User;
   onSelect(user: User): void {
