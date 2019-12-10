@@ -2,16 +2,16 @@
 
 <p>Users data's : </p>
 
-
-
 <div class="allUsers">
   <h2>Users list</h2>
   <ul class="Users">
     <li *ngFor="let user of users"
-        (click)="onSelect(user)">
+        (click)="onSelect(user)"
+    >
       <span class="badge">{{user.city}}</span>:   {{user.firstName}}
     </li>
   </ul>
+
 </div>
 
   <div class="user" *ngIf="selectedUser">
@@ -26,7 +26,7 @@
     <hr>
     <div>
       <label>CITY:
-        <input [(ngModel)]="selectedUser.city" placeholder="city"/>
+        <input class="input" [(ngModel)]="selectedUser.city" placeholder="city"/>
       </label>
     </div>
   </div>

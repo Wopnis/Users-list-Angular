@@ -1,19 +1,37 @@
 <div class="editContainer">
   <h3>Enter new user DATA</h3>
+
   <label>Name:
-    <input type="text" class="dataControl">
+    <input
+      type="text"
+      class="dataControl"
+      placeholder="введите имя"
+      [(ngModel)]="userName"
+    >
   </label>
 
   <label>Surname:
-  <input type="text" class="dataControl">
+  <input type="text"
+         class="dataControl"
+         placeholder="введите фамилию"
+         [(ngModel)]="userSurname"
+  >
   </label>
 
   <label>Age:
-    <input type="text" class="dataControl">
+    <input type="text"
+           class="dataControl"
+           placeholder="введите возраст"
+           [(ngModel)]="userAge"
+    >
   </label>
 
   <label>City:
-    <input type="text" class="dataControl">
+    <input type="text"
+           class="dataControl"
+           placeholder="город проживания"
+           [(ngModel)]="userCity"
+    >
   </label>
-  <button class="btn">ADD NEW USER</button>
+  <button class="btn" (click)="addUser()">ADD NEW USER</button>
 </div>

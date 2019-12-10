@@ -6,14 +6,12 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import {FormsModule} from '@angular/forms';
 import { EditUserDataComponent } from './edit-user-data/edit-user-data.component';
-import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    EditUserDataComponent,
-    UserDetailComponent
+    EditUserDataComponent
   ],
   imports: [
     BrowserModule,

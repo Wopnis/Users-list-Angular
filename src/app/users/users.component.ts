@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { USERS } from '../usersMock';
 import {User} from '../user';
+
 
 
 @Component({
@@ -11,13 +12,11 @@ import {User} from '../user';
 
 
 export class UsersComponent implements OnInit {
-  user = User;
   users = USERS;
   selectedUser: User;
   onSelect(user: User): void {
     this.selectedUser = user;
   }
-
   constructor() { }
 
   ngOnInit() {

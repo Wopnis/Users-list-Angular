@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {User} from './user';
+import {USERS} from './usersMock';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Users-list';
+  user = USERS;
+  updateUsers(user: User) {
+    console.log(user);
+    this.user.unshift(user);
+  }
 }
