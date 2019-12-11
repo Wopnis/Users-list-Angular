@@ -1,0 +1,78 @@
+p {
+  font-size: 1.2rem;
+}
+
+
+input {
+  width: 40%;
+
+  &.ng-invalid.ng-touched {
+    border: 1px solid red;
+    width: 40%;
+  }
+
+  &.ng-valid.ng-touched {
+    border: 1px solid green;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-left: 15%;
+}
+
+ul {
+  list-style: decimal;
+
+
+  li{
+    cursor: grabbing;
+    text-decoration: underline;
+  }
+}
+
+.dataList {
+  display: flex;
+  flex-direction: row;
+}
+ .btn-user {
+   width: 15%;
+   height: 10%;
+   margin-top: 1.5rem;
+   margin-left: 1.5rem;
+   background: #333333;
+   color: #fff;
+   padding: 0.4rem 1.3rem;
+   font-size: .8rem;
+   border: outset;
+   cursor: pointer;
+   margin-right: 0.5rem;
+   transition: opacity 0.2s ease-in;
+   outline: none;
+ }
+
+ .ownData {
+   margin-left: 1.5rem;
+   margin-top: -0.5rem;
+ }
+
+ .loading {
+   font-size: 2rem;
+   color: #e26a1d;
+ }
+
+ .btn-danger {
+   width: 15%;
+   height: 10%;
+   margin-top: 1.5rem;
+   margin-left: 1.5rem;
+   background: #c81b15;
+   color: #fff;
+   padding: 0.4rem 1.3rem;
+   font-size: .8rem;
+   border: outset;
+   cursor: pointer;
+   margin-right: 0.5rem;
+   transition: opacity 0.2s ease-in;
+   outline: none;
+ }

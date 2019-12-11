@@ -1,0 +1,125 @@
+
+<div class="container">
+
+<div class="add">
+  <h1>СПИСОК ПОЛЬЗОВАТЕЛЕЙ</h1>
+  <p>Сервер</p>
+  <p>Добавить пользователя</p>
+
+  <label>ИМЯ:
+    <input
+      type="text"
+      class="dataControl"
+      placeholder="введите имя"
+      [(ngModel)]="userName"
+    >
+  </label>
+
+  <label>Фамилия:
+    <input type="text"
+           class="dataControl"
+           placeholder="введите фамилию"
+           [(ngModel)]="userSurname"
+    >
+  </label>
+
+  <label>E-mail:
+    <input type="text"
+           class="dataControl"
+           placeholder="введите E-mail"
+           [(ngModel)]="userEmail"
+    >
+  </label>
+
+  <label>Адрес:
+    <input type="textarea"
+           class="dataControl"
+           placeholder="введите адрес"
+           [(ngModel)]="userAddress"
+    >
+  </label>
+
+  <label>Телефон:
+    <input type="text"
+           class="dataControl"
+           placeholder="введите телефон"
+           [(ngModel)]="userPhone"
+    >
+  </label>
+
+  <label>Вэб-сайт:
+    <input type="text"
+           class="dataControl"
+           placeholder="Ваш вэб-сайт"
+           [(ngModel)]="userEmail"
+    >
+  </label>
+
+  <label>Компания:
+    <input type="textarea"
+           class="dataControl"
+           placeholder="Ваша компания"
+           [(ngModel)]="userCompany"
+    >
+  </label>
+</div>
+  <button class="btn" (click)="addUser()">Добавить нового пользователя</button>
+  <hr>
+
+
+
+  <div class="dataList" *ngIf="!loading; else loadingBlock">
+    <p>Данные пользователей</p>
+
+    <button class="btn-user" (click)="fetchAllList()">Вывести список данных</button>
+
+  <ul class="list">
+    <li *ngFor="let user of users"
+        (click)="onSelect(user)"
+    >
+        <span class="show" >Имя и фамилия:  {{user.name}}  {{user.surname}}</span>
+    </li>
+  </ul>
+
+    <div class="ownData" *ngIf="selectedUser">
+      <p>Полные данные: </p>
+      <div><span>Имя: </span>{{selectedUser.name}}</div>
+      <div><span>Email: </span>{{selectedUser.email}}</div>
+      <div><span>Телефон: </span>{{selectedUser.phone}}</div>
+      <div><span>Место проживания: </span>{{selectedUser.address.city}}</div>
+      <div><span>Место работы: </span>{{selectedUser.company.name}}</div>
+      <div><span>Идентификатор: </span>{{selectedUser.id}}</div>
+
+
+    </div>
+
+  </div>
+
+  <ng-template #loadingBlock>
+    <p class="loading">LOADING....</p>
+  </ng-template>
+
+  <hr>
+
+  <div class="removing">
+
+    <label>Выберите пользователя:
+      <input
+        type="text"
+        class="dataControl"
+        placeholder="введите Идентификатор"
+
+      >
+    </label>
+
+    <button class="btn-danger">Удалить пользователя</button>
+
+
+  </div>
+
+
+
+
+
+
+</div>

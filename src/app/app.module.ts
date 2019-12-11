@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import {FormsModule} from '@angular/forms';
 import { EditUserDataComponent } from './edit-user-data/edit-user-data.component';
+import { ServerComponent } from './server/server.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    EditUserDataComponent
+    EditUserDataComponent,
+    ServerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
