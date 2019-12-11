@@ -31,7 +31,7 @@ export class ServerComponent implements OnInit {
   userAddress = '';
   userPhone = '';
   userCompany = '';
-  userId = '';
+  userId = undefined;
   onSelect(user: User): void {
     this.selectedUser = user;
   }
@@ -51,6 +51,7 @@ export class ServerComponent implements OnInit {
       address: this.userAddress,
       phone: this.userPhone,
       company: this.userCompany,
+      id: this.userId
     };
     this.http.post<User>('https://jsonplaceholder.typicode.com/users', newUser)
       .subscribe(user => {
